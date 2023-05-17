@@ -1,0 +1,120 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    background-color: #181a1b;
+}
+
+#logo{
+    padding: 25px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+#logo span{
+    color: #d12b2b;
+}
+
+.nav{
+    background-color: #414649;
+}
+
+.nav ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.nav li{
+    float: left;
+    padding: 12px;
+}
+
+.nav a{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 12px;
+}
+
+.nav li:hover{
+    transition: 0.5s;
+    background-color: #d12b2b;
+}
+
+.dropdown .drop_button{
+    border: none;
+    outline: none;
+    background: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    color: #ffffff;
+}
+
+.drop_content{
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    background-color: #414649;
+    margin-top: 10px;
+    left: 0;
+}
+
+.drop_content a{
+    display: block;
+}
+
+.drop_content a:hover{
+    transition: 0.5s;
+    background-color: #d12b2b;
+}
+
+#btt_menu{
+    display: none;
+}
+
+label{
+    padding: 10px;
+    color: #ffffff;
+    font-size: 50px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+}
+
+@media screen and (max-width: 800px){
+    .header{
+        text-align: center;
+    }
+
+    label{
+        display: block;
+    }
+
+    .nav{
+        display: none;
+    }
+
+    #btt_menu:checked ~ .nav{
+        display: block;
+    }
+
+    .nav li{
+        float: none;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 425px){
+    #logo{
+        font-size: 25px;
+    }
+
+    label{
+        font-size: 40px;
+    }
+}
